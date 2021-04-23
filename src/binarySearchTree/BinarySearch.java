@@ -59,17 +59,7 @@ public class BinarySearch {
 //		return -1;
 //	}
 	
-//	public List<Integer> listIndex (int[] a, int left, int right, int x) {
-//		int preIndex=binarySearch(a,left,right,x-1);
-//		int postIndex=binarySearch(a,left,right,x+1);
-//		List<Integer> listX=new ArrayList<Integer>();
-//		for (int i=preIndex+1;i<postIndex;i++) {
-//			if (a[i]==x) {
-//				listX.add(i);
-//			}
-//		}
-//		return listX;
-//	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinarySearch test=new BinarySearch();
@@ -78,9 +68,6 @@ public class BinarySearch {
 		int right=a.length-1;
 		int x=4;
 		System.out.println(test.binarySearch(a, left, right,x));
-//		List<Integer> res=test.listIndex(a, left, right, x);
-//		System.out.println(res.get(0));
-//		System.out.println(res.get(res.size()-1));
 		System.out.println(test.binarySearchMinIndex(a, left, right, x));
 		System.out.println(test.binarySearchMaxIndex(a, left, right, x));
 	}
