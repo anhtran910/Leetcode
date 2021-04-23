@@ -45,17 +45,31 @@ public class BinarySearch {
 		 
 	}
 	
-	public List<Integer> listIndex (int[] a, int left, int right, int x) {
-		int preIndex=binarySearch(a,left,right,x-1);
-		int postIndex=binarySearch(a,left,right,x+1);
-		List<Integer> listX=new ArrayList<Integer>();
-		for (int i=preIndex+1;i<postIndex;i++) {
-			if (a[i]==x) {
-				listX.add(i);
-			}
-		}
-		return listX;
-	}
+	//Find index of the first number smaller than target number x
+//	public int BSIndexOfNumberSmaller(int[] a, int left, int right, int x) {  
+//		while (left<=right) {
+//			int mid=left+(right-left)/2;
+//			if (x==a[mid]) return mid;
+//			else if (a[mid]>x) {
+//				right=mid-1;
+//			} else {
+//				left=mid+1;
+//			}			
+//		}
+//		return -1;
+//	}
+	
+//	public List<Integer> listIndex (int[] a, int left, int right, int x) {
+//		int preIndex=binarySearch(a,left,right,x-1);
+//		int postIndex=binarySearch(a,left,right,x+1);
+//		List<Integer> listX=new ArrayList<Integer>();
+//		for (int i=preIndex+1;i<postIndex;i++) {
+//			if (a[i]==x) {
+//				listX.add(i);
+//			}
+//		}
+//		return listX;
+//	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinarySearch test=new BinarySearch();
