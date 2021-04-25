@@ -50,7 +50,7 @@ public class BinarySearch {
         //int resFirst=0;
         while (left <= right) {
             int mid = left + (right - left) / 2;
-           // if (mid==0) return mid;
+            if (mid==0) return mid;
             if (x == a[mid]) {
 
                 if (a[mid - 1] == a[mid]) {
@@ -72,7 +72,7 @@ public class BinarySearch {
         //int resLast=0;
         while (left <= right) {
             int mid = left + (right - left) / 2;
-           // if (mid==a.length) return mid;
+            if (mid==a.length-1) return mid;
             if (x == a[mid]) {
                 if (a[mid+1]==a[mid]) {
                     left = mid + 1;
@@ -96,7 +96,7 @@ public class BinarySearch {
 		int right1=right;
 		 while (left1 <= right1) {
 	            int mid = left1 + (right1 - left1) / 2;
-	            if (mid==0) return mid;
+	            if (mid==0) return -1;
 	            if (x == a[mid]) {
 
 	                if (a[mid - 1] == a[mid]) {
@@ -122,7 +122,7 @@ public class BinarySearch {
 			int right1=right;	
 			 while (left1 <= right1) {
 		            int mid = left1 + (right1 - left1) / 2;
-		            
+		            if (mid==a.length-1) return -1;
 		            if (a[mid]==x) {
 
 		                if (a[mid + 1] == x) {
@@ -144,17 +144,17 @@ public class BinarySearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinarySearch test=new BinarySearch();
-		int[] a= {1,2,3,4,4,4,6,7,9};
+		int[] a= {4,4,4,6,7,9,9,9};
 		int left=0;
 		int right=a.length-1;
-		int x=10;
+		int x=4;
 //		System.out.println(test.binarySearch(a, left, right,x));
 //		System.out.println(test.binarySearchMinIndex(a, left, right, x));
-//		System.out.println(test.binarySearchMaxIndex(a, left, right, x));
+		System.out.println(test.binarySearchFirstIndex(a, left, right, x));
 		//System.out.println(test.binarySearchLastIndex(a, left, right, x));
 		
-		//System.out.println(test.BSIndexOfNumberSmaller(a, left, right, x));
-		System.out.println(test.BSIndexOfNumberBigger(a, left, right, x));
+		System.out.println(test.BSIndexOfNumberSmaller(a, left, right, x));
+		//System.out.println(test.BSIndexOfNumberBigger(a, left, right, x));
 	}
 
 }
