@@ -14,16 +14,8 @@ public class CourseSchedule {
        Map<Integer, Set<Integer>> adjacentList=new HashMap<>();
        for (int[] course:prerequisites) {
 			adjacentList.computeIfAbsent(course[1], k->new HashSet<Integer>()).add(course[0]);
-       }
-//       for (int[] course:prerequisites){
-//           indegree[course[0]]++;
-//       }
-       
-       //loop and update indegree array
-       for(int key:adjacentList.keySet()) {
-    	   indegree[key]=adjacentList.get(key).size();
-       }
-       
+			indegree[course[0]]++;
+       }  
        Queue<Integer> q=new LinkedList<>();
        //add course(as index) has degree value = 0 (mean they are one of the starting points)
        for (int i=0;i<numCourses;i++) {
