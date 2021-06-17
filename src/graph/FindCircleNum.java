@@ -32,7 +32,7 @@ public class FindCircleNum{
 		}
 		
 		return count;
-		
+		  
     }
 	
 //	public void bfs(int i,int[][] isConnected, int[] visited) {
